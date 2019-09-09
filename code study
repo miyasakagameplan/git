@@ -1,0 +1,47 @@
+git
+
+バージョン管理システム（過去のソース等
+
+必要な知識：Linux
+
+ファイルを作ったり修正したり
+
+ある程度のまとまりになったら
+
+履歴データベースに保存する
+
+１．作業ディレクトリ
+
+２．ステージングエリア（インデックス）
+
+３．リポジトリ（リモート、ローカル）
+
+設定
+
+git config --global user.name "名前" //必須
+git config --global user.email "メアド" //必須
+git congig --global colort.ui true //色付け　便利
+git config -l //設定一覧を表示
+git config --help　//マニュアルを表示
+  
+myweb というフォルダ内での作業を想定
+
+cd myweb/ //mywebへ移動
+git init //mywebをgitで使うという宣言　必須
+vim ファイル名 //ファイルの作成(作業ディレクトリ)
+cat ファイル名 //ファイルの中身確認
+git add ファイル名　//ファイルをステージングエリアへあげる 
+git commit //ステージングエリア内のファイルをリポジトリにコミットする
+↓エディタが表示される
+initial commit 
+
+git log //コミットのログ確認
+
+git log --oneline //コミット情報の省略化
+
+git log -p //コミットしたファイルの変更箇所が表示される
+
+git log --stat //どのファイルがなんか所変更されたか表示される
+
+
+
