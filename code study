@@ -28,7 +28,7 @@ myweb というフォルダ内での作業を想定
 
 cd myweb/ //mywebへ移動
 git init //mywebをgitで使うという宣言　必須
-vim ファイル名 //ファイルの作成(作業ディレクトリ)
+vim ファイル名 //ファイルの作成・編集(作業ディレクトリ)
 cat ファイル名 //ファイルの中身確認
 git add ファイル名　//ファイルをステージングエリアへあげる 
 git commit //ステージングエリア内のファイルをリポジトリにコミットする
@@ -42,6 +42,90 @@ git log --oneline //コミット情報の省略化
 git log -p //コミットしたファイルの変更箇所が表示される
 
 git log --stat //どのファイルがなんか所変更されたか表示される
+
+git status //ファイルの現在の状況
+
+git checkout -- ファイル名　//編集した箇所が消える
+
+git diff //どこが編集されたのか（ステージングエリアに追加されていない　直近編集したもの
+
+git diff -- cached //次にコミットするとどこがどう変更されるのか
+
+git add . //現在いるディレクトリより下のファイルすべてをステージングエリアにあげる
+
+git rm ファイル名　// 削除
+
+git mv ファイル名 　//移動
+
+vim .gitignore
+*.log //.logの拡張子をすべて無視
+
+git commit -m "コミットメッセージ"
+
+//直前のコミットの修正
+（編集後）git commit --amend
+
+//過去のバージョン
+git reset --hard HEAD　//直前のコミット
+
+git reset --hard HEAD^ //直前のコミットの前
+
+git reset --hard ORIG_HEAD
+
+//ブランチ(別々のバージョンを並行して開発したい場合)
+
+git branch
+*master 
+
+//新しいブランチ
+git branch 名前
+//ブランチ移動
+git checkout 名前
+
+//マージ(混ぜる)
+git marge 混ぜたいブランチ名
+
+git branch -d ブランチ名　//ブランチ削除
+
+//ブランチを作成してすぐに移動
+git checkout -b ブランチ名
+
+CONFLICT　//マージの衝突
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
